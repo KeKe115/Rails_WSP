@@ -1,0 +1,16 @@
+<h1>Add New</h1>
+
+<%# rails5からform_forは無くなり、form_withに統合された %>
+<%# 違いとしては、引数の数と種類が増えた %>
+<%# こんな感じ %>
+<%# form_with(model: nil, scope: nil, url: nil, format: nil, **options) %>
+
+<%= form_with model: @project do |f| %>
+<p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+</p>
+    <%= f.submit %>
+<p>
+</p>
+<% end %>
